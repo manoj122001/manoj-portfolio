@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c436580b00.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "n796lm62wu");
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png " class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Fresher</p>
+                <h1>Hi,I'm <span>Manoj Kumar</span> <br>From Theni.</h1>
+            </div>
+        </div>
+    </div>
+   
+<!-- -----------------------------------------about-------------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/MANOJ KUMAR.jpeg">
+                </div>
+                
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I’m <span>K. Manoj Kumar,</span><br> a passionate software developer with expertise in web and mobile applications. I hold a Master’s degree in Computer Applications and have a strong foundation in HTML, CSS, Python, and MySQL. My experience includes developing various projects, such as disease detection tools and IoT-based systems. I am committed to creating innovative solutions and continuously expanding my technical skills. I thrive on solving complex problems and enjoy collaborating on impactful projects. Let's connect on LinkedIn or check out my work on GitHub.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Experience</p>
+                        <p class="tab-links" onclick="opentab('projects')">Achievements</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span> NPTEL course</span><br>Introduction to IoT</li>
+                            <li><span>Spoken Tutorial</span><br>Python at IIT Bombay </li>
+                            <li><span>Freelancing Projects</span><br>Machine Learning and IoT platforms </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Published research paper</span><br><br>"Advancements in Dental Problem Detection: Leveraging Image Recognition and Machine Learning," currently under verification by my guide.</li>
+                        
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <i class="fa-solid fa-graduation-cap"></i><li><span>2022 - 2024</span><br>MCA - Gandhigram Rural Institute <br>CGPA :<span> 7.37 / 10</span></li>
+                            <i class="fa-solid fa-graduation-cap"></i><li><span>2019 - 2022</span><br>Bsc.computer Science - The American College <br>CGPA :<span> 7.16 / 10</span></li>
+                            <i class="fa-solid fa-school"></i><li><span>2019</span><br>HSC - Srivalli Varadaraj Matric.Hr.Sec.School <br>Percentage :<span> 56.5%</span></li>
+                            <i class="fa-solid fa-school"></i><li><span>2017</span><br>SSLC - Srivalli Varadaraj Matric.Hr.Sec.School <br>Percentage :<span> 79.8%</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- --------------------services--------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Skills</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css3"> <i class="fa-brands fa-js"></i></i>
+                    <h2>Web Development</h2>
+                    <p>Proficient in creating dynamic and responsive web applications using modern front-end and back-end technologies to enhance user experience and functionality.</p>
+                    
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i> 
+                    <h2>Python</h2>
+                    <p>Experienced in Python programming for data analysis, automation, and web development, with a focus on writing efficient and maintainable code.</p>
+                    
+                </div>
+                <div>
+                    <i class="fa-solid fa-microchip"></i> <i class="fa-brands fa-android"></i>
+                    <h2>Machine Learning and Deep Learning</h2>
+                    <p>Machine Learning (ML) and Deep Learning (DL) are subsets of artificial intelligence (AI) that enable computers to learn from data and make decisions with minimal human intervention.</p>
+                    
+                </div>
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>IoT Basics</h2>
+                    <p>Knowledgeable in IoT systems, integrating sensors and devices for data collection and real-time monitoring using platforms like Arduino and Raspberry Pi. </p>
+                    
+                </div>
+                <div>
+                    <i class="fa-brands fa-microsoft"></i>
+                    <h2>Power BI</h2>
+                    <p>Adept at designing interactive dashboards and reports in Power BI to visualize data and support informed decision-making.
+
+                    </p>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ---------portfolio---------- -->
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                
+                <div class="work">
+                    <img src="images\work2.jpg">
+                    <div class="layer">
+                        <h3>Dental Problem Deduction Android App</h3>
+                        <p> A mobile tool designed to assist users in 
+                            identifying dental problems such as abscess, impacted tooth, and tooth decay in dental 
+                            images. It integrates a trained machine learning model with a user-friendly mobile interface 
+                            for easy diagnosis and provides valuable information about preventive measures and oral 
+                            hygiene practices</p>
+                        
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images\work3.jpg">
+                    <div class="layer">
+                        
+                            <h3>Grapes Leaf Disease Deduction Web App</h3>
+                            <p> The Grapes Leaf Disease Deduction Web App is an innovative online tool designed to assist viticulturists, farmers, and plant health enthusiasts in identifying common grapevine leaf diseases such as Black Rot, ESCA, and Leaf Blight, as well as recognizing healthy leaves. By integrating a sophisticated machine learning model with an intuitive web interface.</p>
+                           
+                        
+                    </div>
+                </div>
+                
+                <div class="work">
+                    <img src="images\work4.jpg">
+                    <div class="layer">
+                        <h3>Silkworm Disease Detection Web App</h3>
+                        <p>The Silkworm Disease Detection Web App is a state-of-the-art online tool developed to help sericulturists and researchers identify common silkworm diseases, including Flacherie, Grasserie, Muscardine, and Pebrine, as well as detect healthy silkworms. This web-based application employs a powerful machine learning model paired with a user-friendly interface to provide quick and precise disease identification.</p>
+                        
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images\work1.jpg">
+                    <div class="layer">
+                        <h3>Helmet Detection System</h3>
+                        <p>The Helmet Detection System is a Python-based application that utilizes a pre-trained YOLOv3 model and a custom Convolutional Neural Network (CNN) to detect motorbike riders without helmets in video footage. It processes a video file frame-by-frame, identifies motorbike riders, and determines whether they are wearing helmets.</p>                        
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/manoj122001" class="btn">See Projects</a>
+        </div>
+     </div>
+<!-----------------------------contact-------------------->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-titles">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>  manojkumarmmkk75@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>  6383844655</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/manoj-kumar0612"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=" https://github.com/manoj122001"><i class="fa-brands fa-square-github"></i></a>
+                        
+                    </div>
+                    <a href="images\MANOJ KUMAR RESUME 1.pdf" download class="btn btn2" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Mail" id="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © ManojKumar <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </div>
+     
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzaEFgBDmFMYDx54GmpMvYUXkYSs0NjZs6JqxNUgSi-KDtlRXm3EpdbigPNSS75sEt7/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message Send Successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
