@@ -8,6 +8,10 @@
     content="Portfolio of K. Manoj Kumar - Creative Developer, Freelance Web Developer, and AI/ML Engineer."
   />
   <title>K. Manoj Kumar | Creative Developer</title>
+  <script>
+    // Mark JS availability early so CSS can gracefully handle reveal states
+    document.documentElement.classList.add("js");
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -16,7 +20,9 @@
   />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="no-js">
+  <noscript><div class="noscript-banner">JavaScript is disabled. 3D and parallax animations are turned off, but content is still available below.</div></noscript>
+
   <!-- Fixed parallax gradient layers that move at different scroll speeds -->
   <div class="parallax-bg" aria-hidden="true">
     <div class="bg-layer layer-1" data-speed="0.1"></div>

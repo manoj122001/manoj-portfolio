@@ -31,6 +31,13 @@
     }
   })();
 
+  function disableRevealLock() {
+    document.querySelectorAll(".reveal").forEach((el) => {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    });
+  }
+
   // Three.js setup with rotating/floating geometry in hero section
   function initThreeHero() {
     if (!webglSupported || !window.THREE) {
@@ -118,7 +125,10 @@
 
   // GSAP ScrollTrigger animations for reveal effects and layered parallax
   function initScrollAnimations() {
-    if (!window.gsap || !window.ScrollTrigger) return;
+    if (!window.gsap || !window.ScrollTrigger) {
+      disableRevealLock();
+      return;
+    }
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.utils.toArray(".reveal").forEach((el) => {
@@ -189,7 +199,14 @@
     });
   }
 
-  initThreeHero();
+  try {
+    initThreeHero();
+  } catch (error) {
+    console.warn("Three.js hero failed:", error);
+    if (canvas) canvas.hidden = true;
+    if (fallback) fallback.hidden = false;
+  }
+
   initScrollAnimations();
   initTiltCards();
 })();

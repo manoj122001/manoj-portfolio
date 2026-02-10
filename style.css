@@ -28,6 +28,18 @@ body {
   overflow-x: hidden;
 }
 
+
+.noscript-banner {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffcf55;
+  color: #1d1200;
+  text-align: center;
+  font-weight: 600;
+  padding: 0.55rem 0.8rem;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -360,8 +372,13 @@ h2 {
   color: var(--muted);
 }
 
-/* Reveal-on-scroll state */
+/* Reveal-on-scroll state: visible by default, animated only when JS runs */
 .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.js .reveal {
   opacity: 0;
   transform: translateY(24px);
 }
