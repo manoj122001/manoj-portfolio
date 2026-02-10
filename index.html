@@ -1,249 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c436580b00.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "n796lm62wu");
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of K. Manoj Kumar - Creative Developer, Freelance Web Developer, and AI/ML Engineer."
+  />
+  <title>K. Manoj Kumar | Creative Developer</title>
+  <script>
+    // Mark JS availability early so CSS can gracefully handle reveal states
+    document.documentElement.classList.add("js");
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png " class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Skills</a></li>
-                    <li><a href="#portfolio">My Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Fresher</p>
-                <h1>Hi,I'm <span>Manoj Kumar</span> <br>From Theni.</h1>
-            </div>
+<body class="no-js">
+  <noscript><div class="noscript-banner">JavaScript is disabled. 3D and parallax animations are turned off, but content is still available below.</div></noscript>
+
+  <!-- Fixed parallax gradient layers that move at different scroll speeds -->
+  <div class="parallax-bg" aria-hidden="true">
+    <div class="bg-layer layer-1" data-speed="0.1"></div>
+    <div class="bg-layer layer-2" data-speed="0.2"></div>
+    <div class="bg-layer layer-3" data-speed="0.35"></div>
+  </div>
+
+  <!-- Main navigation -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="#hero" class="brand">K. Manoj Kumar</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section with Three.js canvas and fallback for unsupported devices -->
+    <section id="hero" class="section hero">
+      <canvas id="hero-canvas" aria-label="3D hero animation"></canvas>
+      <div id="webgl-fallback" class="webgl-fallback" hidden>
+        <p>3D background is unavailable on this device. Showing static fallback.</p>
+      </div>
+      <div class="hero-content container parallax-item" data-speed="0.25">
+        <p class="eyebrow">Creative Developer • AI Builder • Freelancer</p>
+        <h1>Hi, I’m <span>K. Manoj Kumar</span>, Creative Developer.</h1>
+        <p>
+          Founder of We2U Tech building scalable web apps, AI-powered systems, and practical digital products.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
         </div>
-    </div>
-   
-<!-- -----------------------------------------about-------------------------- -->
+      </div>
+    </section>
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/MANOJ KUMAR.jpeg">
-                </div>
-                
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hello! I’m <span>K. Manoj Kumar,</span><br> a passionate software developer with expertise in web and mobile applications. I hold a Master’s degree in Computer Applications and have a strong foundation in HTML, CSS, Python, and MySQL. My experience includes developing various projects, such as disease detection tools and IoT-based systems. I am committed to creating innovative solutions and continuously expanding my technical skills. I thrive on solving complex problems and enjoy collaborating on impactful projects. Let's connect on LinkedIn or check out my work on GitHub.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Experience</p>
-                        <p class="tab-links" onclick="opentab('projects')">Achievements</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span> NPTEL course</span><br>Introduction to IoT</li>
-                            <li><span>Spoken Tutorial</span><br>Python at IIT Bombay </li>
-                            <li><span>Freelancing Projects</span><br>Machine Learning and IoT platforms </li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="projects">
-                        <ul>
-                            <li><span>Published research paper</span><br><br>"Advancements in Dental Problem Detection: Leveraging Image Recognition and Machine Learning," currently under verification by my guide.</li>
-                        
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <i class="fa-solid fa-graduation-cap"></i><li><span>2022 - 2024</span><br>MCA - Gandhigram Rural Institute <br>CGPA :<span> 7.37 / 10</span></li>
-                            <i class="fa-solid fa-graduation-cap"></i><li><span>2019 - 2022</span><br>Bsc.computer Science - The American College <br>CGPA :<span> 7.16 / 10</span></li>
-                            <i class="fa-solid fa-school"></i><li><span>2019</span><br>HSC - Srivalli Varadaraj Matric.Hr.Sec.School <br>Percentage :<span> 56.5%</span></li>
-                            <i class="fa-solid fa-school"></i><li><span>2017</span><br>SSLC - Srivalli Varadaraj Matric.Hr.Sec.School <br>Percentage :<span> 79.8%</span></li>
-                        </ul>
-                    </div>
+    <!-- About section with layered elements and fade-in animation -->
+    <section id="about" class="section container reveal">
+      <h2>About</h2>
+      <div class="about-grid">
+        <article class="glass-card parallax-item" data-speed="0.1">
+          <h3>Professional Summary</h3>
+          <p>
+            Software Developer and Freelance Web Developer with hands-on experience in scalable web applications,
+            AI systems, and IoT solutions. I lead end-to-end project delivery at We2U Tech, from requirement
+            gathering to deployment and maintenance.
+          </p>
+          <p>
+            I enjoy solving real-world problems with efficient, high-impact solutions using Python, JavaScript,
+            Machine Learning, and Computer Vision.
+          </p>
+        </article>
+        <aside class="quick-info glass-card parallax-item" data-speed="0.2">
+          <h3>Quick Info</h3>
+          <ul>
+            <li><strong>Location:</strong> Theni, Tamil Nadu, India</li>
+            <li><strong>Email:</strong> k.manojkumar0612@gmail.com</li>
+            <li><strong>Phone:</strong> +91 63838 44655</li>
+            <li><strong>LinkedIn:</strong> linkedin.com/in/manoj-kumar0612</li>
+            <li><strong>GitHub:</strong> github.com/manoj122001</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-                </div>
-            </div>
+    <!-- Projects section with 3D tilt cards and scroll entrance animation -->
+    <section id="projects" class="section container reveal">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card tilt-card" data-tilt>
+          <h3>Me2U Designs E-commerce</h3>
+          <p>Full-featured e-commerce platform with catalog, cart, checkout, and admin dashboard.</p>
+          <a href="https://me2udesigns.in" target="_blank" rel="noreferrer">Visit Live Site</a>
+        </article>
+        <article class="project-card tilt-card" data-tilt>
+          <h3>Dental Problem Detection App</h3>
+          <p>CNN-powered Android app detecting abscess, tooth decay, and impacted tooth from images.</p>
+          <span class="stack">TensorFlow • Keras • Android</span>
+        </article>
+        <article class="project-card tilt-card" data-tilt>
+          <h3>Grapes Leaf Disease Detection</h3>
+          <p>AI web app to classify grape diseases like Black Rot, ESCA, and Leaf Blight.</p>
+          <span class="stack">Python • Flask/React • CNN</span>
+        </article>
+        <article class="project-card tilt-card" data-tilt>
+          <h3>Silkworm Disease Detection</h3>
+          <p>ML-powered platform for sericulture farmers to identify common silkworm diseases.</p>
+          <span class="stack">Python • ML • MySQL</span>
+        </article>
+        <article class="project-card tilt-card" data-tilt>
+          <h3>Helmet Detection System</h3>
+          <p>Computer vision surveillance system using YOLOv3 + CNN for helmet compliance.</p>
+          <span class="stack">Python • OpenCV • YOLOv3</span>
+        </article>
+        <article class="project-card tilt-card" data-tilt>
+          <h3>Personal Portfolio</h3>
+          <p>Professional portfolio for personal branding, resume showcase, and client outreach.</p>
+          <a href="https://manoj-k.in" target="_blank" rel="noreferrer">Open Portfolio</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills section with animated bars and depth effects -->
+    <section id="skills" class="section container reveal">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-head"><span>Python</span><span>90%</span></div>
+          <div class="skill-bar"><span style="--value: 90%"></span></div>
         </div>
-    </div>
-    
-    <!-- --------------------services--------------------- -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">Skills</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css3"> <i class="fa-brands fa-js"></i></i>
-                    <h2>Web Development</h2>
-                    <p>Proficient in creating dynamic and responsive web applications using modern front-end and back-end technologies to enhance user experience and functionality.</p>
-                    
-                </div>
-                <div>
-                    <i class="fa-brands fa-python"></i> 
-                    <h2>Python</h2>
-                    <p>Experienced in Python programming for data analysis, automation, and web development, with a focus on writing efficient and maintainable code.</p>
-                    
-                </div>
-                <div>
-                    <i class="fa-solid fa-microchip"></i> <i class="fa-brands fa-android"></i>
-                    <h2>Machine Learning and Deep Learning</h2>
-                    <p>Machine Learning (ML) and Deep Learning (DL) are subsets of artificial intelligence (AI) that enable computers to learn from data and make decisions with minimal human intervention.</p>
-                    
-                </div>
-                <div>
-                    <i class="fa-solid fa-network-wired"></i>
-                    <h2>IoT Basics</h2>
-                    <p>Knowledgeable in IoT systems, integrating sensors and devices for data collection and real-time monitoring using platforms like Arduino and Raspberry Pi. </p>
-                    
-                </div>
-                <div>
-                    <i class="fa-brands fa-microsoft"></i>
-                    <h2>Power BI</h2>
-                    <p>Adept at designing interactive dashboards and reports in Power BI to visualize data and support informed decision-making.
-
-                    </p>
-                    
-                </div>
-
-            </div>
-
+        <div class="skill-item">
+          <div class="skill-head"><span>JavaScript</span><span>85%</span></div>
+          <div class="skill-bar"><span style="--value: 85%"></span></div>
         </div>
-    </div>
-    <!-- ---------portfolio---------- -->
-     <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                
-                <div class="work">
-                    <img src="images\work2.jpg">
-                    <div class="layer">
-                        <h3>Dental Problem Deduction Android App</h3>
-                        <p> A mobile tool designed to assist users in 
-                            identifying dental problems such as abscess, impacted tooth, and tooth decay in dental 
-                            images. It integrates a trained machine learning model with a user-friendly mobile interface 
-                            for easy diagnosis and provides valuable information about preventive measures and oral 
-                            hygiene practices</p>
-                        
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images\work3.jpg">
-                    <div class="layer">
-                        
-                            <h3>Grapes Leaf Disease Deduction Web App</h3>
-                            <p> The Grapes Leaf Disease Deduction Web App is an innovative online tool designed to assist viticulturists, farmers, and plant health enthusiasts in identifying common grapevine leaf diseases such as Black Rot, ESCA, and Leaf Blight, as well as recognizing healthy leaves. By integrating a sophisticated machine learning model with an intuitive web interface.</p>
-                           
-                        
-                    </div>
-                </div>
-                
-                <div class="work">
-                    <img src="images\work4.jpg">
-                    <div class="layer">
-                        <h3>Silkworm Disease Detection Web App</h3>
-                        <p>The Silkworm Disease Detection Web App is a state-of-the-art online tool developed to help sericulturists and researchers identify common silkworm diseases, including Flacherie, Grasserie, Muscardine, and Pebrine, as well as detect healthy silkworms. This web-based application employs a powerful machine learning model paired with a user-friendly interface to provide quick and precise disease identification.</p>
-                        
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images\work1.jpg">
-                    <div class="layer">
-                        <h3>Helmet Detection System</h3>
-                        <p>The Helmet Detection System is a Python-based application that utilizes a pre-trained YOLOv3 model and a custom Convolutional Neural Network (CNN) to detect motorbike riders without helmets in video footage. It processes a video file frame-by-frame, identifies motorbike riders, and determines whether they are wearing helmets.</p>                        
-                    </div>
-                </div>
-            </div>
-            <a href="https://github.com/manoj122001" class="btn">See Projects</a>
+        <div class="skill-item">
+          <div class="skill-head"><span>HTML/CSS</span><span>92%</span></div>
+          <div class="skill-bar"><span style="--value: 92%"></span></div>
         </div>
-     </div>
-<!-----------------------------contact-------------------->
-     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-titles">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i>  manojkumarmmkk75@gmail.com</p>
-                    <p><i class="fa-solid fa-square-phone"></i>  6383844655</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/manoj-kumar0612"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href=" https://github.com/manoj122001"><i class="fa-brands fa-square-github"></i></a>
-                        
-                    </div>
-                    <a href="images\MANOJ KUMAR RESUME 1.pdf" download class="btn btn2" class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Mail" id="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright © ManojKumar <i class="fa-solid fa-heart"></i></p>
-            </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>React</span><span>80%</span></div>
+          <div class="skill-bar"><span style="--value: 80%"></span></div>
         </div>
-     
+        <div class="skill-item">
+          <div class="skill-head"><span>Computer Vision</span><span>84%</span></div>
+          <div class="skill-bar"><span style="--value: 84%"></span></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-head"><span>MySQL</span><span>78%</span></div>
+          <div class="skill-bar"><span style="--value: 78%"></span></div>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+    <!-- Contact section with floating elements and a simple contact form -->
+    <section id="contact" class="section container reveal contact-section">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-card glass-card parallax-item" data-speed="0.15">
+          <h3>Let's build something meaningful.</h3>
+          <p>Email: <a href="mailto:k.manojkumar0612@gmail.com">k.manojkumar0612@gmail.com</a></p>
+          <p>Phone: <a href="tel:+916383844655">+91 63838 44655</a></p>
+          <p>
+            LinkedIn:
+            <a href="https://linkedin.com/in/manoj-kumar0612" target="_blank" rel="noreferrer">manoj-kumar0612</a>
+          </p>
+          <p>
+            GitHub:
+            <a href="https://github.com/manoj122001" target="_blank" rel="noreferrer">manoj122001</a>
+          </p>
+        </div>
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <script>
+        <form class="contact-form glass-card" action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
 
-        var sidemenu = document.getElementById("sidemenu");
-        
-        function openmenu(){
-            sidemenu.style.right ="0";
-        }
-        function closemenu(){
-            sidemenu.style.right ="-200px";
-        }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzaEFgBDmFMYDx54GmpMvYUXkYSs0NjZs6JqxNUgSi-KDtlRXm3EpdbigPNSS75sEt7/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML="Message Send Successfully"
-                setTimeout(function(){
-                    msg.innerHTML=""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
-    
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project"></textarea>
+
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </div>
+      <div class="floating-orb orb-1" aria-hidden="true"></div>
+      <div class="floating-orb orb-2" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> K. Manoj Kumar • Built with Three.js + GSAP ScrollTrigger.</p>
+  </footer>
+
+  <!-- External libraries: Three.js for 3D, GSAP + ScrollTrigger for parallax and reveal animations -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
